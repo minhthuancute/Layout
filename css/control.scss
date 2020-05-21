@@ -102,7 +102,9 @@ $white: #ecf0f1;
    display: flex;
    justify-content: center;
    align-items: center;
-   .wraper{
+   height: 40px;
+   >.wraper{
+      margin-top:10px;
       ul{
          li{
             padding: 10px 0;
@@ -157,6 +159,25 @@ $white: #ecf0f1;
                }
             }
          }
+      }
+   }
+}
+
+// show datas
+.show{
+   margin: 15px 0;
+}
+
+// footer
+.footer{
+   background-color: $primary;
+   padding: 15px 0;
+   .wraper{
+      text-align: center;
+      color: $white;
+      p{
+         font-size: 16px;
+         line-height: 26px;
       }
    }
 }

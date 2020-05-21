@@ -117,9 +117,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 40px;
 }
 
-.menu-products .wraper ul li {
+.menu-products > .wraper {
+  margin-top: 10px;
+}
+
+.menu-products > .wraper ul li {
   padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,28 +138,28 @@
   cursor: pointer;
 }
 
-.menu-products .wraper ul li:hover ul {
+.menu-products > .wraper ul li:hover ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.menu-products .wraper ul li i {
+.menu-products > .wraper ul li i {
   font-size: 18px;
   color: #ecf0f1;
 }
 
-.menu-products .wraper ul li .infor {
+.menu-products > .wraper ul li .infor {
   margin-left: 15px;
 }
 
-.menu-products .wraper ul li .infor a {
+.menu-products > .wraper ul li .infor a {
   text-transform: uppercase;
   color: #ecf0f1;
   font-size: 18px;
 }
 
-.menu-products .wraper ul li > ul {
+.menu-products > .wraper ul li > ul {
   position: absolute;
   left: 0;
   top: 38px;
@@ -174,7 +179,7 @@
   display: none;
 }
 
-.menu-products .wraper ul li > ul li {
+.menu-products > .wraper ul li > ul li {
   color: #ecf0f1;
   text-transform: uppercase;
   padding: 18px;
@@ -184,11 +189,30 @@
   transition: all 0.3s ease-in;
 }
 
-.menu-products .wraper ul li > ul li:hover {
+.menu-products > .wraper ul li > ul li:hover {
   background-color: #40739e;
 }
 
-.menu-products .wraper ul li > ul li a {
+.menu-products > .wraper ul li > ul li a {
   color: white;
+}
+
+.show {
+  margin: 15px 0;
+}
+
+.footer {
+  background-color: #3498db;
+  padding: 15px 0;
+}
+
+.footer .wraper {
+  text-align: center;
+  color: #ecf0f1;
+}
+
+.footer .wraper p {
+  font-size: 16px;
+  line-height: 26px;
 }
 /*# sourceMappingURL=control.css.map */

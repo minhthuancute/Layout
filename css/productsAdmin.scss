@@ -4,8 +4,8 @@ $secondary: #7f8c8d;
 $black: #2d3436;
 $white: #ecf0f1;
 
-.container{
-   width: 1200px !important;
+.wraper, .container{
+   width: 1200px;
 }
 
 .space{
@@ -26,7 +26,7 @@ $white: #ecf0f1;
 
 // header
 .header{
-   .container{
+   .wraper{
       .left{
          img{
             width: 250px;
@@ -60,7 +60,7 @@ $white: #ecf0f1;
                top: 50%;
                transform: translateY(-50%);
                color: $black;
-               font-size: 16px;
+               font-size: 15px;
                transition: all 0.3s ease-in;
             }
          }
@@ -70,7 +70,7 @@ $white: #ecf0f1;
          ul{
             li{
                text-transform: uppercase;
-               font-size: 18px;
+               font-size: 16px;
                transition: all 0.3s ease-in;
                margin-right: 15px;
                &:last-child{
@@ -87,8 +87,8 @@ $white: #ecf0f1;
                   }
                }
                img{
-                  width: 35px;
-                  height: 35px;
+                  width: 30px;
+                  height: 30px;
                }
             }
          }
@@ -97,106 +97,63 @@ $white: #ecf0f1;
 }
 
 // menu
-.menu{
-   margin-bottom: 25px;
+.menu-products{
    background-color: $primary;
-   padding: 8px 0;
-   .container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   .wraper{
       ul{
          li{
+            padding: 10px 0;
             display: flex;
-            font-size: 18px;
+            align-items: center;
+            font-size: 16px;
+            color: $white;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+               ul{
+                  display: flex;
+               }
+            }
             i{
-               margin: 5px 20px 0 0;
-               font-size: 20px;
+               font-size: 18px;
                color: $white;
             }
             .infor{
-               h5{
+               margin-left: 15px;
+               a{
+                  text-transform: uppercase;
                   color: $white;
-                  font-size: 20px;
-               }
-               p{
-                  margin-top: 2px;
-                  font-size: 15px;
-                  color: $white;
-               }
-            }
-         }
-      }
-   }
-}
-
-// main body
-.landing{
-   margin-bottom: 20px;
-   .container{
-      .list-products{
-         width: 250px;
-         height: 500px;
-         background-color: $primary;
-         border-radius: 2px;
-         ul{
-            color: $white;
-            li{
-               padding: 10px;
-               &:first-child{
-                  text-align: center;
-                  background-color: #2980b9;
-               }
-               h2{
                   font-size: 18px;
                }
             }
-         }
-      }
 
-      .owl-carousel{
-         width: 940px;
-         img{
-            height: 500px;
-            width: 100%;
-         }
-      }
-   }
-}
-
-// new products
-.new-products{
-   margin: 25px 0;
-   .container{
-      border-bottom: 1px solid #b2bec3;
-      border-left: 1px solid #b2bec3;
-      border-right: 1px solid #b2bec3;
-      padding-bottom: 30px;
-      .menu-new-product{
-         background-color: #b2bec3;
-         margin-bottom: 20px;
-         h1{
-            width: 180px;
-            text-align: center;
-            background-color: black;
-            color: $white;
-            padding: 10px;
-            font-size: 16px;
-         }
-      }
-      #new-products{
-         width: 1200px;
-         .items{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            img{
-               width: 100px;
-               height: 100px;
-            }
-            p{
-               margin-top: 10px;
-               &:last-child{
-                  margin-top: 15px;
-                  color: #d63031;
-                  font-weight: 700;
+            >ul{
+               position: absolute;
+               left: 0;
+               top: 38px;
+               width: 200px;
+               background-color: $primary;
+               border-radius: 2px;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               display: none;
+               li{
+                  color: $white;
+                  text-transform: uppercase;
+                  padding: 18px;
+                  width: 100%;
+                  height: 20px;
+                  transition: all 0.3s ease-in;
+                  &:hover{
+                     background-color: #40739e;
+                  }
+                  a{
+                     color: white;
+                  }
                }
             }
          }
@@ -246,12 +203,40 @@ $white: #ecf0f1;
                width: 100px;
                height: 120px;
             }
-            p{
+            h3{
                margin-top: 10px;
+               text-transform: capitalize;
                &:last-child{
                   margin-top: 10px;
-                  color: #d63031;
+
+                  // change color ...
+                  color: black;
                   font-weight: 700;
+               }
+            }
+         }
+
+         .btn{
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            a{
+               i{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 40px;
+                  height: 32px;
+                  background-color: #2980b9;
+                  border-radius: 2px;
+                  color: white;
+               }
+               &:nth-child(2){
+                  margin-left: 5px;
+                  i{
+                     background-color: #c0392b;
+                  }
                }
             }
          }
@@ -259,11 +244,12 @@ $white: #ecf0f1;
    }
 }
 
+
 // footer
 .footer{
    background-color: $primary;
    padding: 15px 0;
-   .container{
+   .wraper{
       text-align: center;
       color: $white;
       p{

@@ -17,4 +17,8 @@ $(document).ready(function () {
       autoPlayTimeout: 5000,
       autoplayHoverPause: true,
    })
+
+   $('#products').click(function () {
+      console.log('thuancute')
+   })
 });
